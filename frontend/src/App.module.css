@@ -43,7 +43,11 @@
   min-height: 100vh;
 }
 
-.main-content {
+.mainContent {
   flex: 1;
+}
+
+.ExtraSpaces{
+  height: 80px;
 }
 

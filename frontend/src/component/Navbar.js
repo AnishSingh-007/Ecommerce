@@ -69,7 +69,8 @@ const Navbar = () => {
       <nav>
         <ul className={styles.navLinks}>
           <li><NavLink to="#">Categories</NavLink></li>
-          <li><NavLink to="#">Product</NavLink></li>
+          <li><NavLink to="#">Wishlist</NavLink></li>
+          <li><NavLink to="#">Cart</NavLink></li>
           <li><NavLink to="#">Login</NavLink></li>
         </ul>
       </nav>
