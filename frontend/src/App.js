@@ -26,6 +26,7 @@ import Footer from './component/Footer';
 import Home from './pages/Home';
 
 import classes from './App.module.css';
+import ProductDetail from './pages/ProductDetail';
 
 
 const App = () => {
@@ -36,11 +37,10 @@ const App = () => {
         <main className={classes.mainContent}>
           <Routes>
             <Route path="/" element={<Home />} />
-            
+            <Route path="/product/:productId" element={<ProductDetail />} />
           </Routes>
         </main>
         <Footer />
-        <div className={classes.ExtraSpaces}></div>
       </div>
     </BrowserRouter>
   );

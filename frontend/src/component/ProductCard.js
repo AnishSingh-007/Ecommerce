@@ -31,7 +31,7 @@ import { FaHeart } from "react-icons/fa";
 const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
-      <img src={product.image} alt={product.title} className={styles.image} />
+      <img src={product.images[0]} alt={product.title} className={styles.image} />
       <div className={styles.details}>
         <h2 className={styles.title}>{product.title}</h2>
         <p className={styles.category}>Category: {product.category}</p>

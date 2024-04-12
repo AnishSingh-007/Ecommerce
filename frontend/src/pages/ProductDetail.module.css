@@ -1,0 +1,243 @@
+/* .productDetail {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px;
+  }
+  
+
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px; 
+}
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #555;
+  }
+  
+  
+  .details {
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  
+  .category {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .addToCart,
+  .buyNow {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addToCart:hover,
+  .buyNow:hover {
+    background-color: #cc4a38;
+  }
+  
+   */
+
+
+   .productDetail {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px;
+  }
+  
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh; /* Set the height of the square area for the image */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #555;
+  }
+
+  .heartIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #ccc; /* Set the default color to appear empty */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Add a transition for smoother hover effect */
+  }
+  
+  .heartIcon:hover {
+    color: #ff6347; /* Change the color to appear filled on hover */
+  }
+  
+  .details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  
+  .category {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+
+  .priceRating {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /* margin-top: auto; */
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: auto;
+
+  }
+  
+  .addToCart,
+  .buyNow {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    width: auto;
+  }
+  
+  .addToCart:hover,
+  .buyNow:hover {
+    background-color: #cc4a38;
+  }
+  

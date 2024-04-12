@@ -8,7 +8,12 @@ export const dummyData = [
       oldPrice: 39.99,
       rating: 4.5,
       inStock: 100,
-      image: "https://example.com/mens-shirt.jpg"
+      images: [
+        "https://example.com/mens-casual-shirt-1.jpg",
+        "https://example.com/mens-casual-shirt-2.jpg",
+        "https://example.com/mens-casual-shirt-3.jpg"
+        // Add more image URLs if needed
+      ]
     },
     {
       id: 2,
@@ -19,7 +24,12 @@ export const dummyData = [
       oldPrice: 59.99,
       rating: 4.2,
       inStock: 80,
-      image: "https://example.com/womens-shoes.jpg"
+      images: [
+        "https://example.com/womens-shoes-1.jpg",
+        "https://example.com/womens-shoes-2.jpg",
+        "https://example.com/womens-shoes-3.jpg"
+        // Add more image URLs if needed
+      ]
     },
     {
       id: 3,
@@ -30,7 +40,12 @@ export const dummyData = [
       oldPrice: 49.99,
       rating: 4.0,
       inStock: 120,
-      image: "https://example.com/bluetooth-earphones.jpg"
+      images: [
+        "https://example.com/bluetooth-earphones-1.jpg",
+        "https://example.com/bluetooth-earphones-2.jpg",
+        "https://example.com/bluetooth-earphones-3.jpg"
+        // Add more image URLs if needed
+      ]
     },
     {
       id: 4,
@@ -41,7 +56,12 @@ export const dummyData = [
       oldPrice: 29.99,
       rating: 4.8,
       inStock: 150,
-      image: "https://example.com/mens-wallet.jpg"
+      images: [
+        "https://example.com/mens-wallet-1.jpg",
+        "https://example.com/mens-wallet-2.jpg",
+        "https://example.com/mens-wallet-3.jpg"
+        // Add more image URLs if needed
+      ]
     },
     {
       id: 5,
@@ -52,7 +72,12 @@ export const dummyData = [
       oldPrice: 69.99,
       rating: 4.7,
       inStock: 90,
-      image: "https://example.com/womens-dress.jpg"
+      images: [
+        "https://example.com/womens-dress-1.jpg",
+        "https://example.com/womens-dress-2.jpg",
+        "https://example.com/womens-dress-3.jpg"
+        // Add more image URLs if needed
+      ]
     },
     {
         id: 6,
@@ -63,7 +88,12 @@ export const dummyData = [
         oldPrice: 89.99,
         rating: 4.4,
         inStock: 70,
-        image: "https://example.com/smartwatch.jpg"
+        images: [
+          "https://example.com/smartwatch-1.jpg",
+          "https://example.com/smartwatch-2.jpg",
+          "https://example.com/smartwatch-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 7,
@@ -74,7 +104,12 @@ export const dummyData = [
         oldPrice: 29.99,
         rating: 4.3,
         inStock: 110,
-        image: "https://example.com/mens-shorts.jpg"
+        images: [
+          "https://example.com/mens-shorts-1.jpg",
+          "https://example.com/mens-shorts-2.jpg",
+          "https://example.com/mens-shorts-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 8,
@@ -85,7 +120,12 @@ export const dummyData = [
         oldPrice: 49.99,
         rating: 4.6,
         inStock: 85,
-        image: "https://example.com/womens-handbag.jpg"
+        images: [
+          "https://example.com/womens-handbag-1.jpg",
+          "https://example.com/womens-handbag-2.jpg",
+          "https://example.com/womens-handbag-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 9,
@@ -96,7 +136,12 @@ export const dummyData = [
         oldPrice: 24.99,
         rating: 4.2,
         inStock: 95,
-        image: "https://example.com/charging-pad.jpg"
+        images: [
+          "https://example.com/charging-pad-1.jpg",
+          "https://example.com/charging-pad-2.jpg",
+          "https://example.com/charging-pad-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 10,
@@ -107,7 +152,12 @@ export const dummyData = [
         oldPrice: 39.99,
         rating: 4.7,
         inStock: 120,
-        image: "https://example.com/mens-hoodie.jpg"
+        images: [
+          "https://example.com/mens-hoodie-1.jpg",
+          "https://example.com/mens-hoodie-2.jpg",
+          "https://example.com/mens-hoodie-3.jpg"
+          // Add more image URLs if needed
+        ]
       }, {
         id: 11,
         category: "Women",
@@ -117,7 +167,12 @@ export const dummyData = [
         oldPrice: 34.99,
         rating: 4.5,
         inStock: 100,
-        image: "https://example.com/womens-sunglasses.jpg"
+        images: [
+          "https://example.com/womens-sunglasses-1.jpg",
+          "https://example.com/womens-sunglasses-2.jpg",
+          "https://example.com/womens-sunglasses-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 12,
@@ -128,7 +183,12 @@ export const dummyData = [
         oldPrice: 69.99,
         rating: 4.8,
         inStock: 80,
-        image: "https://example.com/bluetooth-speaker.jpg"
+        images: [
+          "https://example.com/bluetooth-speaker-1.jpg",
+          "https://example.com/bluetooth-speaker-2.jpg",
+          "https://example.com/bluetooth-speaker-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 13,
@@ -139,7 +199,12 @@ export const dummyData = [
         oldPrice: 119.99,
         rating: 4.3,
         inStock: 90,
-        image: "https://example.com/mens-watch.jpg"
+        images: [
+          "https://example.com/mens-watch-1.jpg",
+          "https://example.com/mens-watch-2.jpg",
+          "https://example.com/mens-watch-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 14,
@@ -150,7 +215,12 @@ export const dummyData = [
         oldPrice: 59.99,
         rating: 4.6,
         inStock: 110,
-        image: "https://example.com/womens-backpack.jpg"
+        images: [
+          "https://example.com/womens-backpack-1.jpg",
+          "https://example.com/womens-backpack-2.jpg",
+          "https://example.com/womens-backpack-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 15,
@@ -161,7 +231,12 @@ export const dummyData = [
         oldPrice: 49.99,
         rating: 4.4,
         inStock: 95,
-        image: "https://example.com/gaming-mouse.jpg"
+        images: [
+          "https://example.com/gaming-mouse-1.jpg",
+          "https://example.com/gaming-mouse-2.jpg",
+          "https://example.com/gaming-mouse-3.jpg"
+          // Add more image URLs if needed
+        ]
       },{
         id: 16,
         category: "Men",
@@ -171,7 +246,12 @@ export const dummyData = [
         oldPrice: 49.99,
         rating: 4.7,
         inStock: 120,
-        image: "https://example.com/mens-jeans.jpg"
+        images: [
+          "https://example.com/mens-jeans-1.jpg",
+          "https://example.com/mens-jeans-2.jpg",
+          "https://example.com/mens-jeans-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 17,
@@ -182,7 +262,12 @@ export const dummyData = [
         oldPrice: 89.99,
         rating: 4.2,
         inStock: 85,
-        image: "https://example.com/womens-coat.jpg"
+        images: [
+          "https://example.com/womens-coat-1.jpg",
+          "https://example.com/womens-coat-2.jpg",
+          "https://example.com/womens-coat-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 18,
@@ -193,7 +278,12 @@ export const dummyData = [
         oldPrice: 19.99,
         rating: 4.6,
         inStock: 150,
-        image: "https://example.com/charging-cable.jpg"
+        images: [
+          "https://example.com/charging-cable-1.jpg",
+          "https://example.com/charging-cable-2.jpg",
+          "https://example.com/charging-cable-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 19,
@@ -204,7 +294,12 @@ export const dummyData = [
         oldPrice: 24.99,
         rating: 4.5,
         inStock: 100,
-        image: "https://example.com/mens-belt.jpg"
+        images: [
+          "https://example.com/mens-belt-1.jpg",
+          "https://example.com/mens-belt-2.jpg",
+          "https://example.com/mens-belt-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
       {
         id: 20,
@@ -215,7 +310,12 @@ export const dummyData = [
         oldPrice: 29.99,
         rating: 4.8,
         inStock: 110,
-        image: "https://example.com/womens-leggings.jpg"
+        images: [
+          "https://example.com/womens-leggings-1.jpg",
+          "https://example.com/womens-leggings-2.jpg",
+          "https://example.com/womens-leggings-3.jpg"
+          // Add more image URLs if needed
+        ]
       },
   ];
   
