@@ -1,0 +1,174 @@
+/* .cartPage {
+    padding: 20px;
+  }
+  
+  .cartItem {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .productImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .productDetails {
+    flex-grow: 1;
+  }
+  
+  .cartSummary {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .cartSummary p {
+    margin-bottom: 10px;
+  }
+  
+  .cartSummary button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cartSummary button:hover {
+    background-color: #cc4a38;
+  }
+  */
+
+
+
+  .cartPage {
+    padding: 20px;
+  }
+
+  .cartContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    height: 400px;
+  }
+
+  .cartItems {
+    overflow: auto;
+    padding: 10px 0px;
+  }
+  
+  .cartItem {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .cartItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .productImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .productDetails {
+    flex-grow: 1;
+  }
+  
+  .cartSummary {
+    /* margin-top: 20px; */
+    /* border-top: 1px solid #ccc; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .cartSummary:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: auto;
+    /* padding: 10px; */
+
+  }
+  
+  .cartSummary p {
+    margin-bottom: 10px;
+  }
+  
+  .cartSummary button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cartSummary button:hover {
+    background-color: #cc4a38;
+  }
+  
+  .buyNowButton {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .buyNowButton:hover {
+    background-color: #cc4a38;
+  }
+  
+
+  /* Hide the default scrollbar */
+  .cartItems::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .cartItems::-webkit-scrollbar-track:hover {
+        width: 10px;
+      }
+  
+  /* Handle */
+  .cartItems::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #aaa9a9; /* You can set a custom color for the handle */
+  }
+  
+  /* Handle on hover */
+  .cartItems::-webkit-scrollbar-thumb:hover {
+    background: #555; /* You can set a different color when hovered */
+  }
+  

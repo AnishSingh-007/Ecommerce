@@ -55,12 +55,14 @@ import { useParams } from "react-router-dom";
 import dummyData from "../assets/dummyData";
 import styles from "./ProductDetail.module.css";
 import { FaHeart } from "react-icons/fa";
+import { useCart } from "../assets/CartContext";
 
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const foundProduct = dummyData.find(
@@ -96,8 +98,9 @@ const ProductDetail = () => {
   };
 
   const handleAddToCart = () => {
-    // Add logic to add product to cart
-    console.log("Product added to cart:", product);
+    if (product) {
+      addToCart(product);
+    }
   };
 
   const handleBuyNow = () => {

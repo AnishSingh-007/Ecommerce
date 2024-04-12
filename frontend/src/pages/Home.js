@@ -38,9 +38,7 @@ const Home = () => {
       </div>
       <div className={styles.productList}>
         {filteredProducts.map(product => (
-          <NavLink to={`/product/${product.id}`} key={product.id} className={styles.navlink}>
             <ProductCard product={product} />
-          </NavLink>
         ))}
       </div>
     </div>
