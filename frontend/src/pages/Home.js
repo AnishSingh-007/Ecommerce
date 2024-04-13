@@ -1,12 +1,37 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import ProductCard from '../component/ProductCard';
-import dummyData from '../assets/dummyData';
+// import dummyData from '../assets/dummyData';
 import styles from './Home.module.css';
+
+import axios from 'axios';
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [dummyData, setDummyData] = useState([]);
+
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8080/app/v1/product"
+        );
+        if (response.status === 200) {
+          console.log(response.data);
+          
+          setDummyData(response.data);
+
+        } else {
+          console.error("Failed to fetch product data");
+        }
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    fetchProductData();
+  }, []);
 
   // Get unique categories
   const categories = [...new Set(dummyData.map(product => product.category))];

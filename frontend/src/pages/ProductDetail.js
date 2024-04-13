@@ -52,10 +52,12 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import dummyData from "../assets/dummyData";
+// import dummyData from "../assets/dummyData";
 import styles from "./ProductDetail.module.css";
 import { FaHeart } from "react-icons/fa";
 import { useCart } from "../assets/CartContext";
+
+import axios from "axios";
 
 
 const ProductDetail = () => {
@@ -65,11 +67,33 @@ const ProductDetail = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    const foundProduct = dummyData.find(
-      (product) => product.id === parseInt(productId)
-    );
-    setProduct(foundProduct);
-  }, [productId]);
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8080/app/v1/product/${productId}`
+        );
+        if (response.status === 200) {
+          console.log(response.data);
+          
+          setProduct(response.data);
+
+        } else {
+          console.error("Failed to fetch product ");
+        }
+      } catch (error) {
+        console.error("Error fetching product :", error);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
+  // useEffect(() => {
+  //   const foundProduct = dummyData.find(
+  //     (product) => product.id === parseInt(productId)
+  //   );
+  //   setProduct(foundProduct);
+  // }, [productId]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

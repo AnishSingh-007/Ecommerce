@@ -29,6 +29,8 @@ import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import { CartProvider } from './assets/CartContext';
 import classes from './App.module.css';
+import Login from './pages/Authentication/Login';
+import Signup from './pages/Authentication/Signup';
 
 
 
@@ -49,6 +51,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart/>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </main>
         <Footer />
