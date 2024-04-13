@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
         minlength: 4,
         select: false
     },
+    cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product"}]
 
 });
 

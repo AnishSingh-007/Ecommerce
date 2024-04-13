@@ -1,11 +1,44 @@
 
 
-import React from "react";
+import React, {useState, useEffect } from "react";
 import { useCart } from "../assets/CartContext";
 import styles from "./Cart.module.css";
+import axios from "axios";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const [ cartItems, setCartItems] = useState([])
+  const { removeFromCart, clearCart } = useCart(); // cartItems
+
+  useEffect(() => {
+    const fetchProductData = async () => {
+      const userDataString  = localStorage.getItem('user');
+      const userData = JSON.parse(userDataString);
+
+      const userId = userData.user._id;
+      const data = {userId}
+      try {
+        const response = await axios.post(
+          "http://localhost:8080/app/v1/user/get-cart", data
+        );
+        if (response.status === 200) {
+          console.log(response.data); 
+          
+          // console.log(response.data.data.cart)
+          setCartItems(response.data.data.cart);
+
+        } else {
+          console.error("Failed to fetch product data");
+        }
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    
+
+
+    fetchProductData();
+  }, []);
 
   // Calculate total price, total discounted price, and savings
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);

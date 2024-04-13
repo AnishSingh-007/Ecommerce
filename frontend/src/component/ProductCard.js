@@ -4,14 +4,37 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./ProductCard.module.css";
 import { FaHeart } from "react-icons/fa";
+import axios from "axios";
 import { useCart } from "../assets/CartContext";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
 
-  const handleAddToCart = () => {
-    addToCart(product);
+  const handleAddToCart = async () => {
+    // addToCart(product);
+    const productId = product._id;
+    const userDataString  = localStorage.getItem('user');
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+
+      const userId = userData.user._id;
+      console.log("inside if ",userData);
+      console.log("inside if ",userId);
+
+      const data = { productId, userId: userId };
+     
+      const response = await axios.post('http://localhost:8080/app/v1/user/add-to-cart', data)
+      
+  
+      if (response.status === 200) {
+          console.log(response.data);
+      }
+    } else {
+      console.log("please login to add to cart");
+    }
   };
+
+
 
   return (
     <div className={styles.card}>

@@ -121,9 +121,33 @@ const ProductDetail = () => {
     setCurrentImageIndex(index);
   };
 
-  const handleAddToCart = () => {
-    if (product) {
-      addToCart(product);
+  // const handleAddToCart = () => {
+  //   if (product) {
+  //     addToCart(product);
+  //   }
+  // };
+
+  const handleAddToCart = async () => {
+    // addToCart(product);
+    const productId = product._id;
+    const userDataString  = localStorage.getItem('user');
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+
+      const userId = userData.user._id;
+      console.log("inside if ",userData);
+      console.log("inside if ",userId);
+
+      const data = { productId, userId: userId };
+     
+      const response = await axios.post('http://localhost:8080/app/v1/user/add-to-cart', data)
+      
+  
+      if (response.status === 200) {
+          console.log(response.data);
+      }
+    } else {
+      console.log("please login to add to cart");
     }
   };
 
