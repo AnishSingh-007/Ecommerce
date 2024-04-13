@@ -27,13 +27,35 @@ const Product = require("../models/productModel")
 // ADMIN 
 const createProduct = async (req, res) => {
   try {
-    const product = new Product(req.body);
+    const lastProduct = await Product.findOne().sort({ id: -1 }).select('id').limit(1);
+
+    let newProductId;
+    if (lastProduct) {
+      newProductId = lastProduct.id + 1;
+    } else {
+      newProductId = 1; // If no previous product, start from 1
+    }
+
+    const product = new Product();
+    product.id = newProductId;
+
+    // Assign each field from req.body one by one
+    if (req.body.category) product.category = req.body.category;
+    if (req.body.title) product.title = req.body.title;
+    if (req.body.description) product.description = req.body.description;
+    if (req.body.price) product.price = req.body.price;
+    if (req.body.oldPrice) product.oldPrice = req.body.oldPrice;
+    if (req.body.rating) product.rating = req.body.rating;
+    if (req.body.inStock) product.inStock = req.body.inStock;
+    if (req.body.images) product.images = req.body.images;
+
     await product.save();
     res.status(201).json(product);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
 };
+
 
 // Get all products
 const getAllProducts = async (req, res) => {

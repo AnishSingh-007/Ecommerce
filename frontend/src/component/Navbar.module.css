@@ -17,10 +17,13 @@
 .navLinks {
   list-style: none;
   display: flex;
+  text-decoration: none;
 }
 
 .navLinks li {
   margin-right: 10px;
+  text-decoration: none;
+
 }
 
 .navLinks li a {
@@ -29,8 +32,10 @@
 }
 
 .navLinks li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
+
+
 
 .active {
   text-decoration: underline;

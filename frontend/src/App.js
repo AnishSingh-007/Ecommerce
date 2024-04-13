@@ -25,6 +25,7 @@ import Header from './component/Navbar';
 import Footer from './component/Footer';
 import Home from './pages/Home';
 
+import AddProduct from './pages/admin/AddProduct';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import { CartProvider } from './assets/CartContext';
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/cart" element={<Cart/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/Admin/add-product" element={<AddProduct />} />
           </Routes>
         </main>
         <Footer />

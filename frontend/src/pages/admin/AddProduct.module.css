@@ -1,0 +1,30 @@
+.productFormContainer {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .productForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .productForm input,
+  .productForm textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .productForm input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .productForm input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
